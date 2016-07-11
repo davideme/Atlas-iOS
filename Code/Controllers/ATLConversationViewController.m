@@ -868,7 +868,6 @@ static NSInteger const ATLPhotoActionSheet = 1000;
     }
     [self configureAddressBarForChangedParticipants];
     [self configureControllerForConversation];
-    [self.collectionView reloadData];
 }
 
 #pragma mark - Device Rotation
