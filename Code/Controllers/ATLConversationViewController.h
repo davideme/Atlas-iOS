@@ -262,6 +262,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)sendMessage:(LYRMessage *)message;
 
+- (void)configureControllerForChangedParticipants;
+
+
 ///---------------------------
 /// @name Configuring Behavior
 ///---------------------------

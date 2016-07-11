@@ -183,6 +183,17 @@ static NSInteger const ATLPhotoActionSheet = 1000;
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+
+    self.messageInputToolbar.translucent = NO;
+    BOOL isPopping = ![self.navigationController.viewControllers containsObject:self];
+    if (isPopping) {
+            [self.messageInputToolbar.textInputView resignFirstResponder];
+    }
+}
+
 - (void)dealloc
 {
     if (self.messageInputToolbar.mediaAttachments.count > 0) {
